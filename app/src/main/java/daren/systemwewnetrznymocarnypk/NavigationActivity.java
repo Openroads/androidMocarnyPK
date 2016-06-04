@@ -83,7 +83,8 @@ public class NavigationActivity extends AppCompatActivity
         } else if (id == R.id.nav_projekt) {
 
         } else if (id == R.id.nav_parking) {
-
+            Intent intent = new Intent(NavigationActivity.this,Parking.class);
+            startActivity(intent);
         } else if (id == R.id.nav_benefit) {
 
 
