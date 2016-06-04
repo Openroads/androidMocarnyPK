@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         about_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,About.class);
+                Intent intent = new Intent(MainActivity.this,Calendar.class);
                 startActivity(intent);
             }
         });

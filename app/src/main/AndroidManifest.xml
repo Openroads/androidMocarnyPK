@@ -24,12 +24,15 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
+
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".Calendar" />
         <activity android:name=".Parking"></activity>
+
     </application>
 
 </manifest>
