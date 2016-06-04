@@ -38,7 +38,6 @@ public class RoomAdapter extends ArrayAdapter<RowRoom> {
             holder = new RowBeanHolder();
             holder.txtTitle = (TextView)row.findViewById(R.id.txtTitle);
             holder.txtDescription = (TextView)row.findViewById(R.id.txtDescription);
-            holder.txtOwner = (TextView)row.findViewById(R.id.txtOwner);
 
             row.setTag(holder);
         }
@@ -50,7 +49,6 @@ public class RoomAdapter extends ArrayAdapter<RowRoom> {
         RowRoom object = data[position];
         holder.txtTitle.setText(object.name);
         holder.txtDescription.setText(object.description);
-        holder.txtOwner.setText(object.owner);
 
         return row;
     }
@@ -59,6 +57,5 @@ public class RoomAdapter extends ArrayAdapter<RowRoom> {
     {
         TextView txtTitle;
         TextView txtDescription;
-        TextView txtOwner;
     }
 }

@@ -35,7 +35,7 @@
             android:label="@string/rezerwacja_label"/>
 
         <activity android:name=".BookRoom"
-            android:label="Zezerewacja sali"/>
+            android:label="Rezerwacja sali"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>
