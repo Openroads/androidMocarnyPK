@@ -27,20 +27,23 @@ public class Parking extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parking);
+      final   TextView text2 = (TextView) findViewById(R.id.text2);
 
-          Button button ;
+        Button button ;
+        new WebServiceHandler()
+                .execute("http//192.168.15.61:8000/api/rest/v1/parkspots/66b5f696-e01c-46f0-a55f-16b393f6ea84/1/take");
 
         button= ((Button) findViewById(R.id.button3));
-      
+
 
        button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View  v){
-                        new WebServiceHandler()
-                                .execute("http//192.168.15.61:8000/api/rest/v1/parkspots/66b5f696-e01c-46f0-a55f-16b393f6ea84/1/take");
-                    }
-                });
+        @Override
+        public void onClick(View view) {
+
+            text2.setText("Zarezerwowano miejsce parkingowe nr 1!");
         }
+    });
+  }
 
     class WebServiceHandler extends AsyncTask<String, Void, String> {
 
@@ -96,11 +99,11 @@ public class Parking extends AppCompatActivity {
                     JSONObject json = new JSONObject(result);
 
                     // pobranie pól obiektu JSON i wyświetlenie ich na ekranie
-                  ((TextView) findViewById(R.id.fortuneText)).setText("status: "
-                          + json.optString("status"));
-                    ((TextView) findViewById(R.id.text2)).setText("data: "
-                            + json.optString("data"));
 
+                    if(!json.optString("Status").equals("OK"))
+                    ((TextView) findViewById(R.id.fortuneText)).setText("Jest dostępne  miejsce nr: 1");
+                    else
+                    ((TextView) findViewById(R.id.fortuneText)).setText("Brak wolnych miejsc");
                 } catch (Exception e) {
                     // obsłuż wyjątek
                     Log.d(MainActivity.class.getSimpleName(), e.toString());
