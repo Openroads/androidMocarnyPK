@@ -7,6 +7,10 @@
             android:icon="@drawable/contact_calendar18dp"
             android:title="@string/kalendarz" />
         <item
+            android:id="@+id/nav_sala_rezerwacja"
+            android:title="@string/book_room"
+         />
+        <item
             android:id="@+id/nav_projekt"
             android:icon="@drawable/ic_group_black_18dp"
             android:title="@string/projekt" />
