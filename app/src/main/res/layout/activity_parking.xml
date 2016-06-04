@@ -9,4 +9,54 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="daren.systemwewnetrznymocarnypk.Parking">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Ilosc dostepnych miejsc: "
+        android:textSize="25dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="#ffffff"
+        android:background="#4CAF50"
+        android:padding="15dp"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/fortuneText"
+        android:layout_below="@id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="90dp"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#008040"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zarezerwuj miejsce"
+        android:id="@+id/button3"
+        android:layout_below="@+id/fortuneText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_below="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="90dp"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:textColor="#008040"/>
+
+
 </RelativeLayout>
