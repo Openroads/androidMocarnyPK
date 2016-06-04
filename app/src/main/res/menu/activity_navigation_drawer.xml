@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/contact_calendar18dp"
+            android:title="@string/kalendarz" />
+        <item
+            android:id="@+id/nav_projekt"
+            android:icon="@drawable/ic_group_black_18dp"
+            android:title="@string/projekt" />
+        <item
+            android:id="@+id/nav_parking"
+            android:icon="@drawable/parking_18dp"
+            android:title="Parking" />
+        <item
+            android:id="@+id/nav_benefit"
+            android:icon="@drawable/ic_pan_tool_black_18dp"
+            android:title="@string/system_benefit" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_chat"
+                android:icon="@drawable/ic_chat_18dp"
+                android:title="Komunikator " />
+        </menu>
+    </item>
+
+</menu>
