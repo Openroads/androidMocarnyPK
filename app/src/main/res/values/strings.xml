@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SystemWewnetrznyMocarnyPK</string>
+    <string name="app_name">Wewnetrzny system</string>
     <string name="log_in">Zaloguj</string>
     <string name="about_us">O firmie</string>
     <string name="title_activity_login">Zaloguj sie</string>
@@ -17,7 +17,7 @@
         completions."
     </string>
     <string name="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tincidunt neque. Sed vel condimentum urna. Morbi sodales suscipit metus, vitae porta sapien consequat eget. Nullam molestie augue id pretium commodo. Ut placerat pulvinar erat a cursus. Donec blandit mauris odio, non gravida nisl blandit et. Morbi semper, est quis imperdiet aliquam, massa felis elementum arcu, eu interdum orci lacus eu lacus.</string>
-    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_activity_navigation">Nasza Firma </string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -29,4 +29,5 @@
     <string name="log_out">Log out</string>
     <string name="book_room">Rezerwacja sali</string>
     <string name="book">Zarezerwuj</string>
+    <string name="rezerwacja_label">Rezerwacja miejsca parkingowego</string>
 </resources>
