@@ -49,7 +49,7 @@ public class BookRoom extends AppCompatActivity {
 
         list.setAdapter(adapter);
     }
-        class WebServiceHandler extends AsyncTask<String, Void, String> {
+    class WebServiceHandler extends AsyncTask<String, Void, String> {
 
             // okienko dialogowe, które każe użytkownikowi czekać
             private ProgressDialog dialog = new ProgressDialog(BookRoom.this);

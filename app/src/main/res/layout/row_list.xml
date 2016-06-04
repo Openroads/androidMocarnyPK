@@ -25,8 +25,10 @@
     <Button
         android:id="@+id/zarezerwuj_batton"
         android:background="#2B6C82"
+        android:layout_gravity="end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="end"
         android:padding="5dp"
         android:text="@string/book"
         android:textSize="15sp"/>

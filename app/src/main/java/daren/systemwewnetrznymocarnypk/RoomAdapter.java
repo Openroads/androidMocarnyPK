@@ -49,6 +49,8 @@ public class RoomAdapter extends ArrayAdapter<RowRoom> {
         RowRoom object = data[position];
         holder.txtTitle.setText(object.name);
         holder.txtDescription.setText(object.description);
+        holder.button = (Button) row.findViewById(R.id.zarezerwuj_batton);
+
 
         return row;
     }
@@ -57,5 +59,6 @@ public class RoomAdapter extends ArrayAdapter<RowRoom> {
     {
         TextView txtTitle;
         TextView txtDescription;
+        Button button;
     }
 }
