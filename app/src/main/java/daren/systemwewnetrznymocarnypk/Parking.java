@@ -31,7 +31,7 @@ public class Parking extends AppCompatActivity {
 
         Button button ;
         new WebServiceHandler()
-                .execute("http//192.168.15.61:8000/api/rest/v1/parkspots/66b5f696-e01c-46f0-a55f-16b393f6ea84/1/take");
+                .execute("http//192.168.1.150:8000/api/rest/v1/parkspots/66b5f696-e01c-46f0-a55f-16b393f6ea84/1/take");
 
         button= ((Button) findViewById(R.id.button3));
 
@@ -66,7 +66,7 @@ public class Parking extends AppCompatActivity {
 
                 try {
                     // zakładamy, że jest tylko jeden URL
-                    URL url = new URL("http://192.168.15.61:8000/api/rest/v1/parkspots/66b5f696-e01c-46f0-a55f-16b393f6ea84/1/take");
+                    URL url = new URL("http://192.168.1.150:8000/api/rest/v1/parkspots/66b5f696-e01c-46f0-a55f-16b393f6ea84/1/take");
                     URLConnection connection = url.openConnection();
 
                     // pobranie danych do InputStream
