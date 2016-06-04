@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp">
 
     <ImageView android:id="@+id/imgIcon"
         android:layout_width="wrap_content"
@@ -18,17 +20,26 @@
         android:padding="10dp" />
 
     <TextView android:id="@+id/txtDescription"
-        android:layout_width="200dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:padding="10dp"/>
 
     <Button
-        android:id="@+id/zarezerwuj_batton"
-        android:background="#2B6C82"
-        android:layout_gravity="end"
+        android:textSize="15sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="end"
+        android:background="#cc0000"
+        android:padding="5dp"
+        android:visibility="invisible"
+        android:text="Anuluj"
+        android:id="@+id/anuluj_button"
+        />
+
+    <Button
+        android:id="@+id/zarezerwuj_batton"
+        android:background="#2B6C82"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="@string/book"
         android:textSize="15sp"/>

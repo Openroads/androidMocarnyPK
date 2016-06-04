@@ -2,6 +2,7 @@ package daren.systemwewnetrznymocarnypk;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by daren on 04.06.16.
@@ -24,6 +26,8 @@ public class RoomAdapter extends ArrayAdapter<RowRoom> {
         this.layoutResourceId = layoutResourceId;
         this.context = context;
         this.data = data;
+        //new WebServiceHandler().execute("http://192.168.1.150:8000/api/rest/v1/rooms/66b5f696-e01c-46f0-a55f-16b393f6ea84/");
+
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -46,10 +50,27 @@ public class RoomAdapter extends ArrayAdapter<RowRoom> {
             holder = (RowBeanHolder)row.getTag();
         }
 
-        RowRoom object = data[position];
+        final RowRoom object = data[position];
+
         holder.txtTitle.setText(object.name);
         holder.txtDescription.setText(object.description);
         holder.button = (Button) row.findViewById(R.id.zarezerwuj_batton);
+        holder.but2= (Button) row.findViewById(R.id.anuluj_button);
+        final RowBeanHolder finalHolder = holder;
+        holder.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finalHolder.button.setText("Gotowe");
+                finalHolder.but2.setVisibility(View.VISIBLE);
+            }
+        });
+        holder.but2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finalHolder.but2.setVisibility(View.INVISIBLE);
+                finalHolder.button.setText("Zarezerwuj");
+            }
+        });
 
 
         return row;
@@ -60,5 +81,7 @@ public class RoomAdapter extends ArrayAdapter<RowRoom> {
         TextView txtTitle;
         TextView txtDescription;
         Button button;
+        Button but2;
     }
+
 }

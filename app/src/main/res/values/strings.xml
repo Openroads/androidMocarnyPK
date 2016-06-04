@@ -30,4 +30,5 @@
     <string name="book_room">Rezerwacja sali</string>
     <string name="book">Zarezerwuj</string>
     <string name="rezerwacja_label">Rezerwacja miejsca parkingowego</string>
+    <string name="dost_sale">Dostępne sale konferencyjne:</string>
 </resources>
