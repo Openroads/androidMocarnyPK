@@ -28,4 +28,5 @@
     <string name="projekt">Projekt</string>
     <string name="log_out">Log out</string>
     <string name="book_room">Rezerwacja sali</string>
+    <string name="book">Zarezerwuj</string>
 </resources>

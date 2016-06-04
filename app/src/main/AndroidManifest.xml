@@ -24,15 +24,13 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity android:name=".Calendar" />
-        <activity android:name=".Parking"></activity>
-
+        <activity android:name=".Parking" />
+        <activity android:name=".BookRoom"></activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>
