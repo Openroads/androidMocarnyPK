@@ -10,6 +10,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="daren.systemwewnetrznymocarnypk.LoginActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/klodka_image"
+        android:layout_marginRight="90dp"
+        android:src="@drawable/kl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="85dp"/>
     <!-- Login progress -->
     <ProgressBar
         android:id="@+id/login_progress"
