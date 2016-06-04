@@ -28,9 +28,14 @@
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Calendar" />
-        <activity android:name=".Parking" />
-        <activity android:name=".BookRoom"></activity>
+
+        <activity android:name=".Calendar"
+            android:label="Kalendarz"/>
+        <activity android:name=".Parking"
+            android:label="@string/rezerwacja_label"/>
+
+        <activity android:name=".BookRoom"
+            android:label="Rezerwacja sali"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>

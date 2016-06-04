@@ -22,10 +22,6 @@
         android:layout_height="wrap_content"
         android:padding="10dp"/>
 
-    <TextView android:id="@+id/txtOwner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp" />
     <Button
         android:id="@+id/zarezerwuj_batton"
         android:background="#2B6C82"
