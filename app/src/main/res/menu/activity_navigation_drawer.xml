@@ -8,6 +8,7 @@
             android:title="@string/kalendarz" />
         <item
             android:id="@+id/nav_sala_rezerwacja"
+            android:icon="@drawable/ic_book_room"
             android:title="@string/book_room"
          />
         <item

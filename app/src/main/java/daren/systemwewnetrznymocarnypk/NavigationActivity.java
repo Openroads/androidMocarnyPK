@@ -64,7 +64,8 @@ public class NavigationActivity extends AppCompatActivity
             return true;
         }else if (id == R.id.action_logout)
         {
-
+            Intent intent = new Intent(NavigationActivity.this,MainActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -82,7 +83,11 @@ public class NavigationActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_projekt) {
 
-        } else if (id == R.id.nav_parking) {
+        }else if (id == R.id.nav_sala_rezerwacja) {
+            Intent intent = new Intent(NavigationActivity.this,BookRoom.class);
+            startActivity(intent);
+
+        }else if (id == R.id.nav_parking) {
             Intent intent = new Intent(NavigationActivity.this,Parking.class);
             startActivity(intent);
         } else if (id == R.id.nav_benefit) {
