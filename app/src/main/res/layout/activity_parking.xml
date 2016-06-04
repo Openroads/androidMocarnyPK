@@ -17,7 +17,7 @@
         android:textSize="25dp"
         android:layout_marginLeft="15dp"
         android:textColor="#ffffff"
-        android:background="#4CAF50"
+
         android:padding="15dp"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
