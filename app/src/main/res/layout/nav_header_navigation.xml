@@ -13,11 +13,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="114dp"
         android:background="@drawable/side_nav_bar"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@android:drawable/sym_def_app_icon" />
+        android:layout_height="76dp"
+        android:src="@drawable/koles"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"/>
+
 
     <TextView
         android:layout_width="match_parent"
@@ -27,11 +28,6 @@
         android:text="Jan Nowak"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:background="@drawable/side_nav_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="dane pracownika" />
+
 
 </LinearLayout>
