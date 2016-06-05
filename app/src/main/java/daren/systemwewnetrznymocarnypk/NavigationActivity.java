@@ -212,7 +212,8 @@ public class NavigationActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_benefit) {
 
-
+            Intent intent = new Intent(NavigationActivity.this,BenefitSystem.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_chat) {
 

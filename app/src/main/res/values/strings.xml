@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Wewnetrzny system</string>
+    <string name="app_name">Pekaton2016</string>
     <string name="log_in">Zaloguj</string>
     <string name="about_us">O firmie</string>
     <string name="title_activity_login">Zaloguj sie</string>
@@ -22,7 +22,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Ustawienia</string>
     <string name="kalendarz">Kalendarz</string>
     <string name="system_benefit">System benefitów</string>
     <string name="projekt">Projekt</string>

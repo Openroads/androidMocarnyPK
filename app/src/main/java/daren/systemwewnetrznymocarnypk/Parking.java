@@ -119,7 +119,7 @@ public class Parking extends AppCompatActivity {
                     JSONObject json = new JSONObject(result);
                     JSONArray jsonArray = json.optJSONArray("data");
                     // pobranie pól obiektu JSON i wyświetlenie ich na ekranie
-                        Log.d("AAAAAAAAAAAA",String.valueOf(jsonArray.length()));
+
                     for(int i=0; i < jsonArray.length(); i++){
                         JSONObject obj = jsonArray.getJSONObject(i);
                         button[i].setText(obj.optString("location"));
@@ -127,10 +127,12 @@ public class Parking extends AppCompatActivity {
                         ars.put("id",obj.optString("id"));
                         ars.put("location",obj.optString("location"));
                     }
-                    if(!json.optString("Status").equals("OK"))
-                    ((TextView) findViewById(R.id.fortuneText)).setText("Jest dostępne  miejsce nr: 1");
-                    else
-                    ((TextView) findViewById(R.id.fortuneText)).setText("Brak wolnych miejsc");
+                    //if(!json.optString("Status").equals("OK"))
+
+
+                   // ((TextView) findViewById(R.id.fortuneText)).setText("Jest dostępne  miejsce nr: 1");
+                   // else
+                   // ((TextView) findViewById(R.id.fortuneText)).setText("Brak wolnych miejsc");
                 } catch (Exception e) {
                     // obsłuż wyjątek
                     Log.d(MainActivity.class.getSimpleName(), e.toString());
