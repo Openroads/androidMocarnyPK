@@ -100,10 +100,10 @@ public class Parking extends AppCompatActivity {
 
                     // pobranie pól obiektu JSON i wyświetlenie ich na ekranie
 
-                    if(!json.optString("Status").equals("OK"))
+                    //if(!json.optString("Status").equals("OK"))
                     ((TextView) findViewById(R.id.fortuneText)).setText("Jest dostępne  miejsce nr: 1");
-                    else
-                    ((TextView) findViewById(R.id.fortuneText)).setText("Brak wolnych miejsc");
+                   // else
+                   // ((TextView) findViewById(R.id.fortuneText)).setText("Brak wolnych miejsc");
                 } catch (Exception e) {
                     // obsłuż wyjątek
                     Log.d(MainActivity.class.getSimpleName(), e.toString());
