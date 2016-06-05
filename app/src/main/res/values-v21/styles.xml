@@ -6,4 +6,5 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">#212121</item>
     </style>
+
 </resources>

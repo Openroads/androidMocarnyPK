@@ -32,7 +32,7 @@ public class Vouchers extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vouchers);
-        Button button =   (Button) findViewById(R.id.button_1);
+        Button button  =   (Button) findViewById(R.id.button_1);
         Button button1 =   (Button) findViewById(R.id.button_2);
         TextView text2 = (TextView) findViewById(R.id.text_2);
 
