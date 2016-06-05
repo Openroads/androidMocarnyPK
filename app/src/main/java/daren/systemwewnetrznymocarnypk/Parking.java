@@ -1,6 +1,7 @@
 package daren.systemwewnetrznymocarnypk;
 
 import android.app.ProgressDialog;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -55,7 +56,7 @@ public class Parking extends AppCompatActivity {
         }
 
   }
-    public void buttonListener(final int i, Button b )
+    public void buttonListener(final int i, final Button b )
     {
         final String[] add_urls = new String[1];
         b.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +66,8 @@ public class Parking extends AppCompatActivity {
                 new WebServiceHandler()
                         .execute(add_urls[0]);
                 Toast.makeText(Parking.this, "Zarezerwowano", Toast.LENGTH_SHORT).show();
+                b.setText("Zajęte");
+                b.setBackgroundColor(Color.GRAY);
             }
         });
     }
