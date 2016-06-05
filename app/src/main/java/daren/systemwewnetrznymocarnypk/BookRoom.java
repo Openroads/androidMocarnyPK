@@ -26,11 +26,16 @@ public class BookRoom extends AppCompatActivity {
 
     private ListView list ;
     private RoomAdapter adapter ;
-    RowRoom room[] = new RowRoom[]{new RowRoom("NAME", "DESCRIPTION", "Owner"),
-            new RowRoom("NAME", "DESCRIPTION", "Owner"),
-            new RowRoom("NAME", "DESCRIPTION", "Owner"),
-            new RowRoom("NAME", "DESCRIPTION", "Owner"),
-            new RowRoom("NAME", "DESCRIPTION", "Owner"),
+    RowRoom room[] = new RowRoom[]{new RowRoom("A01", "Conference room. Ground floor.", "Owner"),
+            new RowRoom("A02", "Conference room. Ground floor.", "Owner"),
+            new RowRoom("A03", "Conference room. Ground floor.", "Owner"),
+            new RowRoom("A04", "Conference room. Ground floor.", "Owner"),
+            new RowRoom("A05", "Conference room. Ground floor.", "Owner"),
+            new RowRoom("B01", "Meeting room. 1st floor.", "Owner"),
+            new RowRoom("B02", "Meeting room. 1st floor.", "Owner"),
+            new RowRoom("B03", "Meeting room. 1st floor.", "Owner"),
+            new RowRoom("C01", "Laboratorium room. 2nd floor.", "Owner"),
+            new RowRoom("C02", "Laboratorium room. 2nd floor.", "Owner"),
     };
 
     @Override
@@ -108,7 +113,7 @@ public class BookRoom extends AppCompatActivity {
                     // }
                     for(int i=0; i < jarray.length(); i++){
                         JSONObject obj = jarray.getJSONObject(i);
-                        room[i]=new RowRoom(obj.optString("name"),obj.optString("description"),obj.optString("id"));
+                       // room[i]=new RowRoom(obj.optString("name"),obj.optString("description"),obj.optString("id"));
 
                     }
 
