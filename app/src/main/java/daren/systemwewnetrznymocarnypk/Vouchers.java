@@ -34,6 +34,7 @@ public class Vouchers extends AppCompatActivity {
         setContentView(R.layout.activity_vouchers);
         Button button =   (Button) findViewById(R.id.button_1);
         Button button1 =   (Button) findViewById(R.id.button_2);
+        TextView text2 = (TextView) findViewById(R.id.text_2);
 
         button.setOnClickListener(new View.OnClickListener() {
                               @Override
@@ -103,6 +104,10 @@ public class Vouchers extends AppCompatActivity {
 
             try {
 
+                JSONObject json = new JSONObject(result);
+                JSONObject jarray =   json.optJSONObject("data");
+                String aJsonString = jarray.getString("code");
+                ((TextView) findViewById(R.id.text_2)).setText(aJsonString);
 
 
 

@@ -15,7 +15,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Zamow"
         android:id="@+id/button_1"
         android:layout_gravity="center_vertical"
         android:layout_centerVertical="true"
@@ -23,16 +23,16 @@
         android:layout_below="@+id/imageView3"/>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView4"
         android:src="@drawable/golabki"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/imageView3" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:src="@drawable/schabowy"
         android:id="@+id/imageView3"
         android:layout_below="@+id/button_2"
@@ -41,10 +41,25 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Zamow"
         android:id="@+id/button_2"
         android:layout_gravity="bottom"
         android:layout_below="@+id/imageView4"
         android:layout_alignStart="@+id/button_1" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/text_2"
+        android:textSize="25dp"
+        android:layout_marginLeft="15dp"
+        android:padding="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/button_1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
