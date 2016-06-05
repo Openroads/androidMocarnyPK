@@ -88,13 +88,4 @@
 
 </GridLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="61dp"
-        android:text="New Button"
-        android:id="@+id/button13"
-        android:layout_below="@+id/gridLayout"
-        android:layout_centerHorizontal="true" />
-
 </RelativeLayout>

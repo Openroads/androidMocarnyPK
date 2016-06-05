@@ -29,7 +29,7 @@ public class Parking extends AppCompatActivity {
     String[] s = {"1","2","13", "34" ,"25","0", "19"};
     final String add_url ="http://192.168.1.150:8000/api/rest/v1/parkspots/66b5f696-e01c-46f0-a55f-16b393f6ea84/";
     HashMap<String,String> ars = new HashMap<String,String>();
-    Button[] button=new Button[10];
+    Button[] button=new Button[9];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,12 +47,11 @@ public class Parking extends AppCompatActivity {
         button[6] = ((Button) findViewById(R.id.button10));
         button[7] = ((Button) findViewById(R.id.button11));
         button[8] = ((Button) findViewById(R.id.button12));
-        button[9] = ((Button) findViewById(R.id.button13));
         int miejsca = ars.size();
 
         for(int i =0;i<button.length;i++)
         {
-            buttonListener(i,button[i]);
+            buttonListener(i+1,button[i]);
         }
 
   }
