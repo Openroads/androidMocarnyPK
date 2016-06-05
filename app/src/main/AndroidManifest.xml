@@ -35,7 +35,8 @@
             android:label="Kalendarz" />
         <activity
             android:name=".Parking"
-            android:label="@string/rezerwacja_label" />
+            android:label="@string/rezerwacja_label"
+            />
         <activity
             android:name=".BookRoom"
             android:label="Rezerwacja sali" />

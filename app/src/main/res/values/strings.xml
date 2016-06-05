@@ -31,4 +31,5 @@
     <string name="book">Zarezerwuj</string>
     <string name="rezerwacja_label">Rezerwacja miejsca parkingowego</string>
     <string name="dost_sale">Dostępne sale konferencyjne:</string>
+    <string name="wybierz_miejsce_i_zarezerwuj">Wybierz miejsce i zarezerwuj</string>
 </resources>

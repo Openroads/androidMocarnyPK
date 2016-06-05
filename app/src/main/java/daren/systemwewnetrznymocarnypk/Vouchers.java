@@ -112,8 +112,6 @@ public class Vouchers extends AppCompatActivity {
 
 
 
-
-
             } catch (Exception e) {
                 // obsłuż wyjątek
                 Log.d(MainActivity.class.getSimpleName(), e.toString());

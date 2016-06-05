@@ -8,7 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
@@ -18,32 +20,55 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 
 public class Parking extends AppCompatActivity {
   // TextView textView2 = (TextView) findViewById(R.id.textView2);
     String[] s = {"1","2","13", "34" ,"25","0", "19"};
+    final String add_url ="http://192.168.1.150:8000/api/rest/v1/parkspots/66b5f696-e01c-46f0-a55f-16b393f6ea84/";
+    HashMap<String,String> ars = new HashMap<String,String>();
+    Button[] button=new Button[10];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parking);
-      final   TextView text2 = (TextView) findViewById(R.id.text2);
-
-        Button button ;
+        setContentView(R.layout.parking);
         new WebServiceHandler()
-                .execute("http//192.168.1.150:8000/api/rest/v1/parkspots/66b5f696-e01c-46f0-a55f-16b393f6ea84/1/take");
+                .execute(add_url);
 
-        button= ((Button) findViewById(R.id.button3));
+      // button = new Button[ars.size()];
+        button[0] = ((Button) findViewById(R.id.button4));
+        button[1] = ((Button) findViewById(R.id.button5));
+        button[2] = ((Button) findViewById(R.id.button6));
+        button[3] = ((Button) findViewById(R.id.button7));
+        button[4] = ((Button) findViewById(R.id.button8));
+        button[5] = ((Button) findViewById(R.id.button9));
+        button[6] = ((Button) findViewById(R.id.button10));
+        button[7] = ((Button) findViewById(R.id.button11));
+        button[8] = ((Button) findViewById(R.id.button12));
+        button[9] = ((Button) findViewById(R.id.button13));
+        int miejsca = ars.size();
 
-
-       button.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-
-            text2.setText("Zarezerwowano miejsce parkingowe nr 1!");
+        for(int i =0;i<button.length;i++)
+        {
+            buttonListener(i,button[i]);
         }
-    });
+
   }
+    public void buttonListener(final int i, Button b )
+    {
+        final String[] add_urls = new String[1];
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                add_urls[0] = add_url+String.valueOf(i)+"/take/";
+                new WebServiceHandler()
+                        .execute(add_urls[0]);
+                Toast.makeText(Parking.this, "Zarezerwowano", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
     class WebServiceHandler extends AsyncTask<String, Void, String> {
 
@@ -66,7 +91,8 @@ public class Parking extends AppCompatActivity {
 
                 try {
                     // zakładamy, że jest tylko jeden URL
-                    URL url = new URL("http://192.168.1.150:8000/api/rest/v1/parkspots/66b5f696-e01c-46f0-a55f-16b393f6ea84/1/take");
+                    URL url = new URL(urls[0]);
+
                     URLConnection connection = url.openConnection();
 
                     // pobranie danych do InputStream
@@ -84,22 +110,23 @@ public class Parking extends AppCompatActivity {
                 }
 
             }
-
-            // metoda wykonuje się po zakończeniu metody głównej,
-            // której wynik będzie przekazany;
-            // w tej metodzie mamy dostęp do UI
             @Override
             protected void onPostExecute(String result) {
-
                 // chowamy okno dialogowe
                 dialog.dismiss();
-
                 try {
                     // reprezentacja obiektu JSON w Javie
                     JSONObject json = new JSONObject(result);
-
+                    JSONArray jsonArray = json.optJSONArray("data");
                     // pobranie pól obiektu JSON i wyświetlenie ich na ekranie
-
+                        Log.d("AAAAAAAAAAAA",String.valueOf(jsonArray.length()));
+                    for(int i=0; i < jsonArray.length(); i++){
+                        JSONObject obj = jsonArray.getJSONObject(i);
+                        button[i].setText(obj.optString("location"));
+                        ars.put("spot",obj.optString("spot"));
+                        ars.put("id",obj.optString("id"));
+                        ars.put("location",obj.optString("location"));
+                    }
                     if(!json.optString("Status").equals("OK"))
                     ((TextView) findViewById(R.id.fortuneText)).setText("Jest dostępne  miejsce nr: 1");
                     else
@@ -109,8 +136,6 @@ public class Parking extends AppCompatActivity {
                     Log.d(MainActivity.class.getSimpleName(), e.toString());
                 }
             }
-
-
         // konwersja z InputStream do String
      private  String streamToString(InputStream  is)
        {
@@ -133,7 +158,6 @@ public class Parking extends AppCompatActivity {
 
         return stringBuilder.toString();
     }
-
 }}
 
 
